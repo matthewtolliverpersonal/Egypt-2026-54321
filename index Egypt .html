@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Egypt · 22 Oct – 1 Nov 2026</title>
+<meta name="description" content="Our family guidebook for Egypt: day-by-day plan, where we are right now, and the story behind every site.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>𓂀</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F8; --card:#FFFFFF; --ink:#13213B; --muted:#56627A; --line:#D9E0EA;
+  --lapis:#1E3F7A; --lapis-ink:#FFFFFF; --gold:#A97A1F; --gold-soft:#F3E6C8; --turq:#1C8580; --turq-soft:#D7EFEC;
+  --shadow:0 1px 2px rgba(19,33,59,.06),0 8px 24px rgba(19,33,59,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0D1524; --card:#152036; --ink:#E8EDF6; --muted:#9CA8BF; --line:#25324C;
+    --lapis:#203F78; --lapis-ink:#F3F6FC; --gold:#E0B055; --gold-soft:#3A2F17; --turq:#56C6BF; --turq-soft:#163A3A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--turq)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--lapis);color:var(--lapis-ink);padding:calc(28px + env(safe-area-inset-top,0px)) 0 30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 18px,#1C8580 18px 22px,var(--gold) 22px 40px,#13213B 40px 44px)}
+.hero h1{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:clamp(40px,11vw,72px);line-height:.95;margin:6px 0 10px;letter-spacing:.01em}
+.hero .dates{font-size:17px;opacity:.9;margin:0}
+.route{display:flex;flex-wrap:wrap;gap:4px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:14px;opacity:.85}
+.route li:not(:last-child)::after{content:"›";margin-left:8px;opacity:.6}
+
+.now{margin:-6px auto 0;position:relative;z-index:2}
+.now-card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:18px 18px 16px;margin-top:-4px;border:1px solid var(--line)}
+.now-status{display:flex;gap:12px;align-items:flex-start}
+.pulse{flex:0 0 12px;width:12px;height:12px;border-radius:50%;background:var(--turq);margin-top:8px;box-shadow:0 0 0 0 var(--turq);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--turq) 60%,transparent)}70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+.now-title{font-family:Marcellus,Georgia,serif;font-size:24px;line-height:1.2;margin:0}
+.now-sub{margin:4px 0 0;color:var(--muted)}
+.now-cta{margin-top:12px;display:inline-block;background:var(--turq-soft);color:var(--turq);font-weight:600;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:15px}
+.clocks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.clock{text-align:center}
+.clock b{display:block;font-size:20px;font-variant-numeric:tabular-nums;font-weight:600}
+.clock span{font-size:13px;color:var(--muted)}
+
+/* ---------- Tabs ---------- */
+.tabs{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line);margin-top:22px;padding-top:env(safe-area-inset-top,0px)}
+.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs a{flex:0 0 auto;padding:14px 12px 12px;text-decoration:none;color:var(--muted);font-weight:600;font-size:15px;border-bottom:3px solid transparent}
+.tabs a[aria-current="true"]{color:var(--ink);border-color:var(--gold)}
+
+section.panel{padding:26px 0 40px}
+.panel h2{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:30px;line-height:1.15;margin:0 0 6px}
+.panel .lede{color:var(--muted);margin:0 0 22px;max-width:60ch}
+
+/* ---------- Timeline ---------- */
+.days{list-style:none;margin:0;padding:0;position:relative}
+.days::before{content:"";position:absolute;left:21px;top:10px;bottom:10px;width:4px;border-radius:2px;
+  background:linear-gradient(var(--turq),color-mix(in srgb,var(--turq) 40%,var(--lapis)))}
+.day{position:relative;padding-left:56px;margin-bottom:18px}
+.day .node{position:absolute;left:10px;top:14px;width:26px;height:26px;border-radius:50%;background:var(--card);border:4px solid var(--turq);display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--turq)}
+.day.today .node{background:var(--gold);border-color:var(--gold);color:#fff}
+.day.past .node{border-color:var(--line);color:var(--muted)}
+.day-card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.day.today .day-card{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft),var(--shadow)}
+.day-head{width:100%;text-align:left;background:none;border:0;padding:16px 16px 14px;cursor:pointer;display:block}
+.day-date{font-size:14px;color:var(--muted);font-weight:600}
+.today-tag{background:var(--gold);color:#fff;border-radius:999px;padding:1px 9px;font-size:12px;margin-left:6px;vertical-align:1px}
+.day-title{font-family:Marcellus,Georgia,serif;font-size:23px;line-height:1.2;margin:2px 0 4px}
+.day-place{font-size:14px;color:var(--turq);font-weight:600}
+.day-sum{margin:8px 0 0;color:var(--muted);font-size:15px}
+.chev{float:right;margin-top:4px;transition:transform .2s;color:var(--muted)}
+.day[open-day] .chev{transform:rotate(180deg)}
+.day-body{display:none;padding:0 16px 16px}
+.day[open-day] .day-body{display:block}
+.logi{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 14px}
+.pill{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.pill.gold{background:var(--gold-soft);border-color:transparent}
+
+.stops{display:grid;gap:12px}
+.stop{display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:stretch;background:var(--bg);border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid transparent;text-align:left;padding:0}
+.stop:hover{border-color:var(--line)}
+.ph{background:linear-gradient(135deg,var(--turq-soft),var(--gold-soft));position:relative;min-height:96px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.ph img.ok{opacity:1}
+.ph .glyph{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:var(--turq);opacity:.6}
+.stop-txt{padding:10px 12px 10px 0}
+.stop-txt h4{margin:0;font-size:16px;line-height:1.3}
+.stop-txt p{margin:3px 0 0;font-size:14px;color:var(--muted);line-height:1.45}
+.stop .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--gold);margin-bottom:2px}
+
+/* ---------- Sheet (deep dive) ---------- */
+.sheet{position:fixed;inset:0;z-index:50;display:none}
+.sheet.open{display:block}
+.sheet .scrim{position:absolute;inset:0;background:rgba(8,14,26,.55)}
+.sheet .panel-in{position:absolute;left:0;right:0;bottom:0;max-height:94vh;max-height:94dvh;background:var(--card);border-radius:20px 20px 0 0;overflow:auto;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));animation:up .28s ease-out}
+@media (min-width:820px){.sheet .panel-in{left:50%;width:720px;transform:translateX(-50%);top:4vh;bottom:4vh;border-radius:20px;max-height:none}}
+@keyframes up{from{transform:translateY(30px);opacity:.4}to{opacity:1}}
+@media (min-width:820px){@keyframes up{from{opacity:0}to{opacity:1}}}
+@media (prefers-reduced-motion:reduce){.sheet .panel-in{animation:none}}
+.sheet-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--turq-soft),var(--gold-soft));position:relative}
+.sheet-img img{width:100%;height:100%;object-fit:cover}
+.close{position:sticky;top:10px;float:right;margin:10px 10px -50px 0;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(8,14,26,.6);color:#fff;font-size:22px;cursor:pointer}
+.sheet-body{padding:18px 20px 8px}
+.sheet-body .kicker{font-size:14px;color:var(--turq);font-weight:600}
+.sheet-body h3{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:30px;line-height:1.15;margin:4px 0 12px}
+.sheet-body p{margin:0 0 14px;max-width:66ch}
+.box{border-radius:14px;padding:14px 16px;margin:16px 0}
+.box h5{margin:0 0 6px;font-size:15px}
+.box ul{margin:0;padding-left:20px}
+.box li{margin:4px 0}
+.box.look{background:var(--turq-soft)}
+.box.kids{background:var(--gold-soft)}
+.credit{font-size:13px;color:var(--muted)}
+
+/* ---------- Map ---------- */
+.map-wrap{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:10px;overflow-x:auto}
+.map-wrap svg{display:block;width:100%;min-width:320px;height:auto}
+.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:10px}
+.map-legend i{display:inline-block;width:22px;height:0;border-top:4px solid var(--turq);vertical-align:middle;margin-right:6px}
+.map-legend i.fly{border-top:3px dashed var(--gold)}
+
+/* ---------- Logistics ---------- */
+.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:15px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+h3.sub{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:22px;margin:28px 0 10px}
+.cols{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:620px){.cols{grid-template-columns:1fr 1fr}}
+.plain{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.plain ul{margin:6px 0 0;padding-left:20px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 18px calc(30px + env(safe-area-inset-bottom,0px))}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Egypt</h1>
+    <p class="dates">Thursday 22 October – Sunday 1 November 2026</p>
+    <ul class="route" aria-label="Route">
+      <li>Cairo</li><li>Aswan</li><li>On the Nile</li><li>Luxor</li><li>Cairo &amp; Giza</li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap now">
+  <div class="now-card" aria-live="polite">
+    <div class="now-status">
+      <span class="pulse" aria-hidden="true"></span>
+      <div>
+        <p class="now-title" id="nowTitle">Loading…</p>
+        <p class="now-sub" id="nowSub"></p>
+        <a class="now-cta" id="nowCta" href="#plan" hidden>See today’s plan</a>
+      </div>
+    </div>
+    <div class="clocks">
+      <div class="clock"><b id="tCairo">--:--</b><span>Egypt</span></div>
+      <div class="clock"><b id="tParis">--:--</b><span>Paris</span></div>
+      <div class="clock"><b id="tFla">--:--</b><span>Florida</span></div>
+    </div>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap">
+    <a href="#plan" aria-current="true">Day by day</a>
+    <a href="#map">Map</a>
+    <a href="#logistics">Flights &amp; hotels</a>
+  </div>
+</nav>
+
+<main>
+  <section class="panel" id="plan">
+    <div class="wrap">
+      <h2>Day by day</h2>
+      <p class="lede">Tap a day to open it, then tap any stop for the story behind it.</p>
+      <ol class="days" id="days"></ol>
+    </div>
+  </section>
+
+  <section class="panel" id="map">
+    <div class="wrap">
+      <h2>The route</h2>
+      <p class="lede">North is up. The Nile flows north, so our boat drifts with the current from Aswan towards Luxor; the flights do the long hops.</p>
+      <div class="map-wrap" id="mapBox"></div>
+      <div class="map-legend"><span><i></i>By boat or road</span><span><i class="fly"></i>By plane</span></div>
+    </div>
+  </section>
+
+  <section class="panel" id="logistics">
+    <div class="wrap">
+      <h2>Flights &amp; hotels</h2>
+      <p class="lede">All times are local. Egypt is 1 hour ahead of Paris until 25 October, then 2 hours ahead until 29 October, then 1 hour again.</p>
+
+      <h3 class="sub">Flights</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Date</th><th>Flight</th><th>Route</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td>Thu 22 Oct</td><td>Lufthansa LH582</td><td>Frankfurt → Cairo</td><td>15:20</td></tr>
+          <tr><td>Fri 23 Oct</td><td>Nile Air NP83</td><td>Cairo → Aswan</td><td>07:50 – 09:20</td></tr>
+          <tr><td>Thu 29 Oct</td><td>Air Cairo SM51</td><td>Luxor → Cairo</td><td>09:00 – 10:00</td></tr>
+          <tr><td>Sun 1 Nov</td><td>Swiss LX239</td><td>Cairo → Zurich</td><td>13:10</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 class="sub">Where we sleep</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Nights</th><th>Place</th><th>Stay</th></tr></thead>
+        <tbody id="stays"></tbody>
+      </table></div>
+
+      <h3 class="sub">How the touring works</h3>
+      <div class="cols">
+        <div class="plain"><b>Arranged by Djed Egypt Travel</b>
+          <ul><li>A private English-speaking Egyptologist guide</li><li>Private air-conditioned minibus and driver</li><li>Entrance fees on the itinerary</li><li>Bottled water on every outing</li></ul>
+        </div>
+        <div class="plain"><b>Paid separately</b>
+          <ul><li>Lunches and tips</li><li>Special tombs: Tutankhamun, Seti I, Ramesses VI</li><li>Hot-air balloon over Luxor (about $120 each)</li><li>Inside the Great Pyramid (about $30 each)</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Made for the family. Photos load from Wikipedia and Wikimedia Commons; tap “Read more” on any stop for the full article and photo credits.</footer>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="scrim" data-close></div>
+  <div class="panel-in" id="sheetPanel"></div>
+</div>
+
+<script>
+/* =========================================================
+   Trip data
+   ========================================================= */
+const STAYS = [
+  {nights:"22 Oct", place:"Cairo (airport)", name:"Le Méridien Cairo Airport", q:"Le Meridien Cairo Airport"},
+  {nights:"23 Oct", place:"Aswan", name:"Nala Narty hotel", q:"Nala Narty hotel Aswan"},
+  {nights:"24–26 Oct", place:"On the Nile", name:"Dahabiya Najma", q:"Najma dahabiya Nile"},
+  {nights:"27–28 Oct", place:"Luxor", name:"Juneina Villas", q:"Juneina Villas Luxor"},
+  {nights:"29–31 Oct", place:"Cairo (Zamalek)", name:"Cairo Marriott Hotel, Zamalek", q:"Cairo Marriott Hotel Zamalek"}
+];
+
+const DAYS = [
+{
+  start:"2026-10-22", end:"2026-10-22", label:"Thu 22 Oct",
+  title:"Arrival in Cairo", place:"Cairo",
+  sum:"Fly in from Frankfurt, met at the airport by our Djed host, and settle into the hotel near the airport for an early start.",
+  logi:["✈ LH582 Frankfurt → Cairo, 15:20","🛏 Le Méridien Cairo Airport"],
+  stops:[
+    {id:"cairo", t:"Cairo", q:"Cairo", glyph:"🏙",
+     s:"A city of 22 million on the edge of the desert, and our first night in Egypt.",
+     d:["Cairo sits where the Nile valley opens into the Delta, the hinge between Upper and Lower Egypt. The pharaohs’ capital, Memphis, stood just south of here, and the pyramids rise on the desert edge to the west.",
+        "The city we see today was founded in 969 AD by the Fatimid dynasty, who called it al-Qāhira, ‘the Victorious’. It grew into the largest city in the Arab world and Africa. Tonight is only a stopover near the airport; we come back for four days at the end of the trip."],
+     look:["The scale of the traffic and the sound of the call to prayer at dusk","How green the Nile banks are compared with the desert just beyond"],
+     kids:"Arabic is written right to left, and Egyptian numbers look different from ours: ٣ is 3 and ٧ is 7. Try reading the car number plates."}
+  ]
+},
+{
+  start:"2026-10-23", end:"2026-10-23", label:"Fri 23 Oct",
+  title:"Aswan: Philae, a felucca and the Old Cataract", place:"Aswan",
+  sum:"Early flight south to Aswan, then a full day: a boat to Philae temple, a few hours under sail on a felucca, the Unfinished Obelisk, and high tea at the Old Cataract.",
+  logi:["✈ NP83 Cairo → Aswan, 07:50–09:20","🛏 Nala Narty hotel, Aswan"],
+  stops:[
+    {id:"philae", t:"Temple of Isis at Philae", q:"Philae temple Isis Agilkia", glyph:"𓋹",
+     s:"An island temple to the goddess Isis, moved stone by stone to save it from the rising Nile.",
+     d:["Philae was the great pilgrimage site of Isis, mother of Horus and protector of children. Most of what we see was built by the Greek-speaking Ptolemy kings and the Romans between about 380 BC and 300 AD, long after the age of the pyramids.",
+        "It was also one of the very last places where the old religion survived. The final hieroglyphic inscription ever carved, dated 394 AD, is here, and Isis was still worshipped until the Byzantine emperor Justinian closed the temple around 537 AD. Early Christians later carved crosses into its walls.",
+        "When the British built the first Aswan dam in 1902, Philae spent much of each year underwater; Victorian travellers rowed between its columns. The High Dam of the 1960s would have drowned it for good, so between 1972 and 1980 UNESCO cut the temple into some 40,000 blocks and rebuilt it on the higher island of Agilkia, landscaped to match the original."],
+     look:["Trajan’s Kiosk, the elegant open pavilion by the water nicknamed ‘Pharaoh’s Bed’","Crosses carved over the relief figures, left by the Christians who turned part of the temple into a church","Graffiti from 19th-century travellers, including soldiers from Napoleon’s expedition"],
+     kids:"This whole temple was taken apart like LEGO and rebuilt on a different island. Can you spot any lines where the blocks were cut?"},
+    {id:"felucca", t:"Sailing a felucca", q:"Felucca Nile Aswan", glyph:"⛵",
+     s:"A few slow hours under a white sail, circling the islands of Aswan.",
+     d:["The felucca is the oldest kind of boat still working on the Nile: a wooden hull with one tall triangular (lateen) sail. Boats like it have carried people and goods here for thousands of years.",
+        "Egypt’s geography made sailing easy. The wind blows mostly from the north, so boats raise their sails to travel south, upstream. To go north they drop the sail and let the current carry them. Ancient Egyptians wrote ‘to go south’ with a boat under sail and ‘to go north’ with a boat without one.",
+        "Aswan is the prettiest stretch of the river: granite boulders worn smooth, the green Botanical Garden on Kitchener’s Island, the domed Aga Khan mausoleum on the west bank hill, and Nubian villages in bright colours."],
+     look:["The Aga Khan’s tomb on the hill to the west","Nubian boys paddling tiny boats and singing alongside","Kingfishers and egrets in the rocks"],
+     kids:"Ask the captain to let you steer. Watch how he moves the sail when the wind changes."},
+    {id:"elephantine", t:"Elephantine Island", q:"Elephantine island Aswan", glyph:"🐘",
+     s:"Egypt’s ancient southern frontier, with ruins going back 5,000 years.",
+     d:["For most of ancient history this island marked the southern edge of Egypt. Beyond it lay Nubia and the trade routes for gold, ebony, incense and ivory, which probably gave the island its Greek name, Elephantine. (Some say the smooth grey boulders in the river look like bathing elephants.)",
+        "The town here was home to the ram-headed god Khnum, who was believed to shape people on a potter’s wheel and to release the Nile flood from caves beneath the cataract. The island has a Nilometer, a stairway into the river with measuring marks, used to forecast the size of the flood and therefore how much tax farmers would pay.",
+        "Across the river, ancient Aswan was called Syene. Around 240 BC the Greek scholar Eratosthenes heard that at noon on midsummer’s day the sun shone straight down a well here, compared that with the shadow in Alexandria, and worked out the size of the Earth with remarkable accuracy."],
+     look:["The Nilometer steps with their marks","The elephant-shaped granite boulders","Nubian houses painted blue, yellow and pink"],
+     kids:"A man measured the whole planet using the sun shining down a well near here, more than 2,000 years ago, with no satellites."},
+    {id:"obelisk", t:"The Unfinished Obelisk", q:"Unfinished obelisk Aswan", glyph:"📐",
+     s:"The largest obelisk ever attempted, still lying in the quarry where it cracked.",
+     d:["Aswan’s pink granite was prized across Egypt. Obelisks, statues and the burial chamber of the Great Pyramid were cut here and floated hundreds of kilometres downriver.",
+        "This one would have stood about 42 metres tall and weighed around 1,100 tonnes, roughly a third bigger than any obelisk ever raised. It is usually dated to the reign of Queen Hatshepsut, around 1450 BC. Partway through, a crack opened in the stone and the workers abandoned it where it lay.",
+        "Because it was never finished, it shows exactly how the job was done: workers pounded away the granite with balls of dolerite, an even harder stone, then would have undercut it and levered it free. You can still see the pounding marks and the outlines of their work trenches."],
+     look:["The crack that ended the project","Rows of round pounding marks along the sides","Outlines of other, smaller pieces that were successfully removed"],
+     kids:"Imagine bashing solid granite with a stone ball, all day, every day. That’s how this was carved. No metal tool was hard enough."},
+    {id:"oldcataract", t:"High tea at the Old Cataract", q:"Old Cataract Hotel Aswan", glyph:"🫖",
+     s:"Tea on the terrace of the grand Victorian hotel, watching sunset over the Nile.",
+     d:["The Old Cataract opened in 1899, built by Thomas Cook to house wealthy Europeans who came to Aswan for the dry winter air. Its terrace above the granite rocks of the first cataract has one of the best sunset views in Egypt.",
+        "Guests have included Winston Churchill, Tsar Nicholas II and Agatha Christie, who stayed here and used Aswan as a setting for Death on the Nile. Today it is the Sofitel Legend Old Cataract, and afternoon tea on the terrace is the traditional way for non-guests to enjoy it."],
+     look:["Feluccas tacking back and forth below the terrace at sunset","Elephantine Island directly opposite","The Moorish-style dining room"],
+     kids:"A famous detective story happens on a Nile boat. You’re about to sleep on one."}
+  ]
+},
+{
+  start:"2026-10-24", end:"2026-10-26", label:"Sat 24 – Tue 27 Oct",
+  title:"Three nights on the dahabiya Najma", place:"Sailing from Aswan to Esna",
+  sum:"Board the Najma in Aswan and drift downriver for three nights, stopping at temples, sandbanks and villages. The crew sets the daily plan; the stops below are the usual highlights on this stretch.",
+  logi:["⛵ Dahabiya Najma (booked directly)","3 nights on board"],
+  stops:[
+    {id:"dahabiya", t:"Life on a dahabiya", q:"Dahabeah Nile sailing boat", glyph:"⛵",
+     s:"A two-masted sailing houseboat, the way travellers explored the Nile in the 1800s.",
+     d:["Dahabiya comes from the Arabic for ‘golden’, after the gilded barges of Egypt’s medieval rulers. In the 19th century, before steamers, a dahabiya was how Europeans travelled the Nile, often hiring one for months and stopping wherever they liked.",
+        "Modern dahabiyas carry only a handful of cabins. They sail when the wind allows and are towed by a small tug when it doesn’t. Because they are small, they can tie up at sandbanks and quiet villages that the big cruise ships pass by. Najma means ‘star’ in Arabic.",
+        "Days tend to follow the river: a temple visit in the cool morning, lunch on deck, swimming or kayaking from a sandbank, sunset, and dinner on board or on the bank."],
+     look:["Water buffalo, sugar cane fields and palm groves sliding past","Herons and kingfishers along the banks","The night sky: almost no light pollution"],
+     kids:"Keep a river log: what animals did you see today, and how many times did the sails go up?"},
+    {id:"komombo", t:"Kom Ombo: the double temple", q:"Temple of Kom Ombo", glyph:"🐊",
+     s:"A temple shared by two gods, with a museum of mummified crocodiles.",
+     d:["Kom Ombo is unique: it is perfectly symmetrical, with two entrances, two halls and two sanctuaries side by side. The left half belongs to Haroeris (Horus the Elder), a falcon god; the right to Sobek, the crocodile god.",
+        "Sobek was worshipped here because the Nile was full of crocodiles, and people hoped to keep them on their side. Sacred crocodiles were kept in a pool, fed, and mummified when they died. Several are on display in the little Crocodile Museum next door.",
+        "The temple was built by the Ptolemy kings between about 180 and 47 BC. Look for a relief often described as surgical instruments, and a carved calendar of festivals."],
+     look:["The two doorways side by side","Sobek with his crocodile head","The relief of what look like medical tools"],
+     kids:"Count the crocodile mummies in the museum. The smallest ones are babies, and there are even mummified crocodile eggs."},
+    {id:"silsila", t:"Gebel el-Silsila", q:"Gebel el-Silsila quarry", glyph:"🪨",
+     s:"Ancient sandstone quarries where the river narrows between cliffs.",
+     d:["Here the Nile squeezes between sandstone cliffs. For about 1,500 years this was Egypt’s main source of sandstone: much of Karnak and Luxor temples, which we see on Tuesday, was cut here and floated downstream.",
+        "The cliffs are covered with quarry marks, little shrines cut into the rock, and carved inscriptions left by officials and boatmen. The Speos of Horemheb, a small rock-cut chapel, has reliefs of the king. It is a quiet stop few big boats make."],
+     look:["Chisel marks on the quarry faces","Small chapels cut into the cliff above the river"],
+     kids:"The stones for Karnak came from right here. On Tuesday, look for the same colour stone."},
+    {id:"edfu", t:"Temple of Horus at Edfu", q:"Temple of Edfu Horus", glyph:"𓅃",
+     s:"The best-preserved temple in Egypt, roof and all.",
+     d:["Edfu is the most complete ancient temple in Egypt. It was built between 237 and 57 BC for Horus, the falcon god, and still has its roof, its pylon gateway and its sanctuary. Walking through it gives the clearest sense of what a temple felt like: halls getting darker and lower as you approach the holy of holies.",
+        "It survived because sand and later houses buried it up to its roof. The French archaeologist Auguste Mariette cleared it in the 1860s.",
+        "The walls tell the story of Horus defeating his uncle Seth, who killed Horus’s father Osiris. Every year the statue of Hathor sailed from Dendera to visit Horus here for a festival."],
+     look:["The two huge granite falcons at the entrance","The dark sanctuary with its polished granite shrine","Soot on the ceilings from people who lived inside the temple"],
+     kids:"Horus is the falcon god. Find his statue and see whether you can stand as tall as him."},
+    {id:"esna", t:"Temple of Khnum at Esna", q:"Temple of Esna Khnum", glyph:"🐏",
+     s:"A temple in a pit nine metres below the modern town, with freshly cleaned colours.",
+     d:["The town of Esna has grown up around this temple for 2,000 years, so the ancient floor now sits about nine metres below today’s street. Only the hypostyle hall is excavated; the rest is still under the houses.",
+        "The hall was built under the Romans and dedicated to Khnum, the ram-headed creator god. For centuries the ceiling was black with soot and grime. A cleaning project by Egyptian and German teams, finished in recent years, revealed vivid original paint, including a ceiling of zodiac signs.",
+        "Esna is also where boats wait their turn to go through the river lock beside the barrage, where traders row out to sell scarves and blankets to passengers."],
+     look:["The painted astronomical ceiling","Column capitals carved as different plants","How far down the temple floor is from the street"],
+     kids:"Look for the zodiac signs on the ceiling. Can you find yours?"}
+  ]
+},
+{
+  start:"2026-10-27", end:"2026-10-27", label:"Tue 27 Oct",
+  title:"Karnak and Luxor Temple", place:"Esna → Luxor",
+  sum:"Disembark in Esna and drive to Luxor. In the afternoon, the vast temple complex of Karnak, then Luxor Temple as it lights up at sunset.",
+  logi:["🛏 Juneina Villas, Luxor"],
+  stops:[
+    {id:"luxor", t:"Luxor, ancient Thebes", q:"Thebes Egypt Luxor", glyph:"🏛",
+     s:"The religious capital of Egypt’s golden age.",
+     d:["From about 2000 to 1000 BC, Thebes was the heart of Egypt. The pharaohs of the New Kingdom, including Hatshepsut, Thutmose III, Akhenaten, Tutankhamun and Ramesses II, poured their wealth into temples to Amun on the east bank, where the sun rises, and into tombs and memorial temples on the west bank, where it sets.",
+        "Homer called it ‘hundred-gated Thebes’. The Arabic name Luxor comes from al-Uqsur, ‘the palaces’, after the temple ruins. Today it holds a large share of all the ancient monuments in the world."],
+     look:["East bank: temples of the living. West bank: tombs of the dead","The 2.7 km Avenue of Sphinxes linking Karnak and Luxor Temple"],
+     kids:"East bank is for the living, west bank for the dead, just like sunrise and sunset."},
+    {id:"karnak", t:"Karnak Temple", q:"Karnak temple complex", glyph:"𓉐",
+     s:"The largest religious complex ever built, added to by pharaohs for 2,000 years.",
+     d:["Karnak was the home of Amun-Ra, king of the gods. Almost every pharaoh for two thousand years wanted to leave his mark here, adding gateways, halls, obelisks and chapels, so the site grew into a sprawling city of temples covering about 100 hectares.",
+        "The highlight is the Great Hypostyle Hall: 134 sandstone columns in 16 rows, the central 12 rising about 21 metres, carved and once painted with scenes of the pharaohs Seti I and Ramesses II. It was originally roofed, with only slits of light from above.",
+        "Look up for the obelisk of Queen Hatshepsut, almost 30 metres of single granite block, quarried in Aswan where we saw the unfinished one. Near the Sacred Lake is a giant granite scarab; locals say walking around it seven times brings luck."],
+     look:["The Great Hypostyle Hall, best in late afternoon light","Hatshepsut’s obelisk","The avenue of ram-headed sphinxes at the entrance","The giant scarab beside the Sacred Lake"],
+     kids:"It takes six people holding hands to circle one of the big columns. Try it with the family."},
+    {id:"luxortemple", t:"Luxor Temple at sunset", q:"Luxor Temple", glyph:"🌅",
+     s:"A temple built for one festival a year, beautifully lit after dark.",
+     d:["Luxor Temple was built mainly by Amenhotep III and Ramesses II, around 1390–1250 BC. Once a year, during the Opet Festival, the statue of Amun was carried in a sacred boat from Karnak along the Avenue of Sphinxes to this temple, to renew the king’s divine power.",
+        "At the entrance stand colossal statues of Ramesses II and a single obelisk. Its twin was given to France in 1830 and now stands in the Place de la Concorde in Paris; it took years to ship and raise.",
+        "The temple has been in continuous use for 3,400 years: Romans turned part of it into a shrine to the emperors, and the Abu el-Haggag mosque, still in use, sits on top of the old courtyard, its door now hanging high above the excavated floor."],
+     look:["The lone obelisk, whose twin is in Paris","The mosque perched on the temple walls","The Avenue of Sphinxes stretching towards Karnak, lit at night"],
+     kids:"You’ve probably walked past this obelisk’s twin in Paris, at Place de la Concorde. Take a photo and compare when you get home."}
+  ]
+},
+{
+  start:"2026-10-28", end:"2026-10-28", label:"Wed 28 Oct",
+  title:"The West Bank: Valley of the Kings and beyond", place:"Luxor West Bank",
+  sum:"Royal tombs in the Valley of the Kings, Hatshepsut’s terraced temple, painted tombs of the nobles, Medinet Habu and the Colossi of Memnon. Optional dawn balloon ride first.",
+  logi:["🛏 Juneina Villas, Luxor","🎈 Optional balloon at dawn"],
+  stops:[
+    {id:"balloon", t:"Optional: hot-air balloon at dawn", q:"Hot air balloon Luxor west bank", glyph:"🎈", tag:"Optional, about $120 per person",
+     s:"Watch the sun rise over the Nile and the Theban hills from above.",
+     d:["Balloons lift off from the west bank just before sunrise, usually around 5:30–6:00 am, and drift for about 45 minutes over fields, villages and temples, with the Valley of the Kings’ mountain behind. It can be combined with today’s touring since flights finish early.",
+        "Flights depend on the wind and are cancelled if it is too strong. Children under about 6 are usually not allowed; check the operator’s rules for the 7-year-old."],
+     look:["Hatshepsut’s temple glowing as the sun hits the cliffs","Dozens of other balloons rising together"],
+     kids:"The pilot steers only up and down. The wind decides where you go."},
+    {id:"vok", t:"Valley of the Kings", q:"Valley of the Kings", glyph:"𓀭",
+     s:"Hidden royal tombs cut deep into the mountain, painted for the journey to the afterlife.",
+     d:["After the age of the pyramids, which were easy targets for robbers, the New Kingdom pharaohs chose to be buried in secret tombs in this dry valley beneath a natural pyramid-shaped peak, al-Qurn. More than 60 tombs have been found, used from about 1500 to 1070 BC.",
+        "The walls are covered with guidebooks to the underworld: the Book of Gates, the Book of Caverns, the Amduat. They show the sun god’s boat sailing through the 12 hours of the night, with the dead king aboard, battling the serpent Apophis before being reborn at dawn.",
+        "Only 10 to 12 tombs are open at any time, on rotation, to protect them. Our ticket covers three standard tombs; the three famous ones below need extra tickets."],
+     look:["The natural pyramid of al-Qurn above the valley","How the colours brighten as you go deeper","Graffiti by Greek and Roman tourists, some 2,000 years old"],
+     kids:"The pictures on the walls are a map for the king’s journey through the night. Can you find the sun’s boat?"},
+    {id:"tut", t:"Tutankhamun’s tomb (KV62)", q:"KV62 Tutankhamun tomb", glyph:"🪙", tag:"Extra ticket, EGP 700",
+     s:"Small and simply decorated, but the king himself still lies inside.",
+     d:["Tutankhamun became king at about nine and died at about nineteen, around 1323 BC. He was a minor ruler, which is probably why his small tomb was forgotten and then buried under workmen’s huts when the tomb of Ramesses VI was built above it.",
+        "In November 1922 Howard Carter, funded by Lord Carnarvon, found the steps. Peering in by candlelight, asked if he could see anything, Carter is said to have replied that he saw wonderful things. It took ten years to empty the tomb of over 5,000 objects, now displayed in the Grand Egyptian Museum, which we visit on Saturday.",
+        "Tutankhamun’s mummy still lies here in a climate-controlled case, along with his outer stone sarcophagus. Only the burial chamber is painted."],
+     look:["The king’s mummy, face and feet visible","The painted burial chamber with the baboons of the first hour of night"],
+     kids:"See the king here on Wednesday, then his gold mask and treasures in Cairo on Saturday."},
+    {id:"seti", t:"Tomb of Seti I (KV17)", q:"KV17 tomb Seti I", glyph:"✨", tag:"Extra ticket, EGP 2,000",
+     s:"The longest and most beautiful tomb in the valley.",
+     d:["Seti I, father of Ramesses II, ruled around 1290–1279 BC and had the finest tomb in the valley: about 137 metres long, every wall and pillar carved and painted.",
+        "It was discovered in 1817 by Giovanni Belzoni, a former circus strongman turned explorer. His alabaster sarcophagus was shipped to London and is now in Sir John Soane’s Museum. The tomb’s high ticket price limits visitor numbers and pays for conservation. If we only buy one extra ticket, this is the one."],
+     look:["The ceiling of the burial chamber, painted with stars and constellations","Raised reliefs so fine they look like porcelain"],
+     kids:"The man who found this tomb used to lift 12 people at once in a circus act."},
+    {id:"r6", t:"Tomb of Ramesses VI (KV9)", q:"KV9 tomb Ramesses VI", glyph:"🌌", tag:"Extra ticket, EGP 220",
+     s:"A ceiling of the sky goddess Nut swallowing the sun.",
+     d:["This tomb, from around 1140 BC, is famous for its astronomical ceiling. The sky goddess Nut stretches the length of the burial chamber twice: once swallowing the sun at dusk, once giving birth to it at dawn, with the hours of day and night in between.",
+        "It is wide and well-lit, and one of the easiest tombs to visit with children. Its construction is what buried Tutankhamun’s doorway under rubble and kept it hidden for 3,000 years."],
+     look:["Nut’s long body arching across the ceiling","The sun as a red disc moving through her body"],
+     kids:"Ancient Egyptians believed the sky goddess swallowed the sun every night and gave birth to it every morning."},
+    {id:"hatshepsut", t:"Temple of Hatshepsut", q:"Mortuary Temple of Hatshepsut", glyph:"👑",
+     s:"A queen who ruled as pharaoh, and her temple set into the cliffs.",
+     d:["Hatshepsut ruled Egypt from around 1479 to 1458 BC, one of very few women to take the full title of pharaoh. She was often shown wearing the royal false beard. Her reign was peaceful and prosperous.",
+        "Her architect, Senenmut, built this memorial temple in three great terraces rising into the cliff face of Deir el-Bahari, unlike any other temple in Egypt. Its reliefs show her famous trading expedition to the land of Punt, with ships bringing back incense trees, monkeys and a very large queen of Punt.",
+        "After her death, her stepson Thutmose III had many of her images chiselled out, and she was largely left out of the official king lists until archaeologists pieced her story back together."],
+     look:["The Punt reliefs with ships and fish","The Hathor chapel with cow-eared columns","Scratched-out faces of the queen"],
+     kids:"Find a picture where Hatshepsut’s face has been chiselled away. Someone tried to erase her from history, and it didn’t work."},
+    {id:"nobles", t:"Tombs of the Nobles", q:"Tombs of the Nobles Theban necropolis", glyph:"🪞",
+     s:"Painted scenes of everyday life, lit with mirrors.",
+     d:["Officials, priests and scribes were buried in the hills here, and they painted their tombs with the life they hoped to enjoy forever: harvesting, fishing, hunting birds in the marshes, banquets with musicians and dancers.",
+        "These scenes tell us more about how ordinary Egyptians lived than the royal tombs do, and the colours are often brighter. Guardians still angle mirrors and foil reflectors to bounce sunlight into the darkest corners."],
+     look:["Banquet scenes with guests wearing perfume cones on their heads","Farm work through the seasons","Cats hunting birds in the papyrus"],
+     kids:"Look for the cat. Egyptians loved cats and painted them in lots of tombs."},
+    {id:"medinet", t:"Medinet Habu", q:"Medinet Habu temple Ramesses III", glyph:"🛡",
+     s:"The memorial temple of Ramesses III, with some of the best colour in Thebes.",
+     d:["Ramesses III built this vast fortified temple around 1150 BC. Its outer walls show his battles against the ‘Sea Peoples’, invaders from the Mediterranean who destroyed several kingdoms of the time; it is one of the earliest pictures of a naval battle.",
+        "Inside, the second courtyard and some halls keep their deep blue, red and yellow paint. The temple later sheltered a whole town, Djeme, with a mud-brick wall around it, and Coptic Christians built a church in the courtyard."],
+     look:["The naval battle on the north outer wall","Original colours on the second courtyard ceilings","The tall fortified gate modelled on a Syrian fortress"],
+     kids:"Find the battle scene with ships. Can you tell which soldiers are Egyptian?"},
+    {id:"memnon", t:"The Colossi of Memnon", q:"Colossi of Memnon", glyph:"🗿",
+     s:"Two 18-metre stone kings that once ‘sang’ at dawn.",
+     d:["These two seated statues of Amenhotep III once guarded the entrance to his memorial temple, the largest in Thebes. The temple itself was built on the flood plain and has almost vanished; archaeologists are still digging it up behind the statues.",
+        "After an earthquake in 27 BC cracked the northern statue, it began to make a sound at sunrise, probably as the stone warmed and dew evaporated. Greek and Roman tourists came to hear it and carved poems on its legs. When the Roman emperor Septimius Severus had it repaired around 200 AD, it fell silent forever."],
+     look:["Greek and Latin graffiti on the northern statue’s legs","Excavation work at the Temple of Amenhotep III behind"],
+     kids:"Listen carefully at the northern statue. It hasn’t sung for 1,800 years, but you never know."}
+  ]
+},
+{
+  start:"2026-10-29", end:"2026-10-29", label:"Thu 29 Oct",
+  title:"Back to Cairo: mummies and Coptic Cairo", place:"Luxor → Cairo",
+  sum:"Morning flight to Cairo, then the royal mummies at the Museum of Egyptian Civilization and the churches, synagogue and museum of old Coptic Cairo.",
+  logi:["✈ SM51 Luxor → Cairo, 09:00–10:00","🛏 Cairo Marriott, Zamalek"],
+  stops:[
+    {id:"nmec", t:"National Museum of Egyptian Civilization", q:"National Museum of Egyptian Civilization", glyph:"🏺",
+     s:"The whole story of Egypt in one hall, and the royal mummies below it.",
+     d:["This museum in Fustat tells Egypt’s story from prehistory through the pharaohs, Greeks, Romans, Copts and Islamic dynasties to today, in one large central gallery.",
+        "Its star is the Royal Mummies Hall. In April 2021, 22 royal mummies, including Ramesses II, Seti I and Queen Hatshepsut, were driven here from the old Egyptian Museum in the ‘Pharaohs’ Golden Parade’, each in its own gold-decorated vehicle, with a televised ceremony and a 21-gun salute.",
+        "The mummies lie in low light in a hall designed to feel like a royal tomb. You can see Ramesses II, who lived to about 90 and ruled for 66 years."],
+     look:["Ramesses II’s face and red-tinted hair","Hatshepsut, identified in 2007 partly from a single tooth","The textiles gallery"],
+     kids:"On Wednesday you may visit Seti I’s tomb. Today you can see Seti himself."},
+    {id:"coptic", t:"Coptic Cairo", q:"Coptic Cairo Babylon fortress", glyph:"⛪",
+     s:"Old churches inside a Roman fortress, where the Holy Family is said to have sheltered.",
+     d:["Coptic Cairo grew inside the Roman fortress of Babylon, whose towers still stand near the metro station. The Copts are Egypt’s Christians, one of the oldest Christian communities in the world; ‘Copt’ simply comes from the Greek word for Egyptian.",
+        "The Hanging Church (al-Muallaqa) is built over the fortress gatehouse, so its nave seems to hang in the air; it dates in its present form from around the 9th–11th centuries. The Church of Saints Sergius and Bacchus (Abu Serga) has a crypt where, by tradition, Mary, Joseph and the baby Jesus rested during their flight into Egypt.",
+        "The Ben Ezra Synagogue nearby was the site of the Cairo Geniza: a storeroom where, for about 1,000 years, the community kept every scrap of writing that might contain God’s name. Around 400,000 manuscript fragments were found in the 1890s, giving historians an extraordinary picture of medieval Mediterranean life."],
+     look:["The cedar and ivory screens in the Hanging Church","The Holy Family crypt under Abu Serga","The Coptic Museum’s carved wood and early Christian textiles"],
+     kids:"Coptic writing uses Greek letters plus a few left over from hieroglyphs. Look for it on the church signs."}
+  ]
+},
+{
+  start:"2026-10-30", end:"2026-10-30", label:"Fri 30 Oct",
+  title:"The Pyramids of Giza and Saqqara", place:"Giza and Saqqara",
+  sum:"The three pyramids, the Sphinx and the Valley Temple of Khafre, a desert panorama, then Saqqara and the Step Pyramid, the first great stone building on Earth.",
+  logi:["🛏 Cairo Marriott, Zamalek","🔺 Optional: inside the Great Pyramid"],
+  stops:[
+    {id:"giza", t:"The Pyramids of Giza", q:"Giza pyramid complex", glyph:"🔺",
+     s:"The last surviving wonder of the ancient world.",
+     d:["Three kings of the 4th Dynasty built their pyramids here around 2560–2500 BC: Khufu (Cheops in Greek), his son Khafre and his grandson Menkaure. They were already ancient when Cleopatra was alive: she lived closer in time to us than to the pyramid builders.",
+        "The Great Pyramid of Khufu was originally about 146 metres tall and was the tallest human-made structure on Earth for nearly 4,000 years. It contains roughly 2.3 million blocks. It was built not by slaves but by paid crews of workers, whose village and tombs have been excavated just south of the plateau.",
+        "The pyramids were covered with smooth white limestone that shone in the sun. Most was stripped in the Middle Ages to build Cairo, but a cap of it survives at the top of Khafre’s pyramid."],
+     look:["The casing stones on top of Khafre’s pyramid","The small queens’ pyramids beside Khufu’s","The panorama point, with all the pyramids lined up"],
+     kids:"If you stacked the Great Pyramid’s blocks in a line, one after another, it would stretch about halfway round the Earth."},
+    {id:"cheops", t:"Optional: inside the Great Pyramid", q:"Grand Gallery Great Pyramid", glyph:"🔦", tag:"Optional, about $30 per person",
+     s:"A steep climb through the Grand Gallery to the King’s Chamber.",
+     d:["The way in is a low, steep passage, followed by the Grand Gallery: a soaring corridor about 47 metres long and 8.6 metres high with a corbelled ceiling, one of the most impressive spaces of the ancient world.",
+        "It leads to the King’s Chamber, lined with Aswan granite, holding an empty lidless granite sarcophagus. There is no decoration and little to see, but the experience of being inside 4,500 years of stone is unforgettable. It is hot and cramped, and guides are not allowed to explain inside, so it is not for anyone claustrophobic."],
+     look:["The Grand Gallery’s stepped ceiling","Granite from the Aswan quarries we visited"],
+     kids:"Remember the Aswan quarry? This room is made of the same pink granite, carried 800 km down the Nile."},
+    {id:"sphinx", t:"The Great Sphinx", q:"Great Sphinx of Giza", glyph:"🦁",
+     s:"A lion with a king’s face, carved from the living rock.",
+     d:["The Sphinx is about 73 metres long and 20 metres high, carved from a ridge of limestone left by the quarrymen. Most Egyptologists believe the face is that of King Khafre, whose pyramid and causeway it guards.",
+        "For much of history it was buried up to its neck in sand. A stone tablet between its paws tells how the young prince Thutmose IV fell asleep here and dreamed the Sphinx promised him the throne if he cleared away the sand.",
+        "Its nose was not shot off by Napoleon’s soldiers, as legend says; drawings show it missing earlier, and chisel marks suggest it was deliberately removed, possibly in the 14th century."],
+     look:["The Dream Stela between the paws","Traces of red paint near the ear","The view down the causeway to Khafre’s pyramid"],
+     kids:"Napoleon gets blamed for breaking the nose, but he didn’t do it. Ask the guide who did."},
+    {id:"valleytemple", t:"Valley Temple of Khafre", q:"Valley Temple of Khafre", glyph:"🧱",
+     s:"Giant granite blocks where the king’s body was prepared.",
+     d:["This temple stood at the edge of the old flood plain, where boats could reach it. It was likely where Khafre’s funeral began, before his body was carried up the causeway to his pyramid.",
+        "It is built of massive granite blocks fitted with astonishing precision, some weighing over 100 tonnes, with floors of white alabaster. A famous diorite statue of Khafre, protected by a falcon, was found buried here and is now in Cairo."],
+     look:["The corner blocks that wrap around angles","The alabaster floor"],
+     kids:"Some blocks here weigh as much as 70 cars."},
+    {id:"saqqara", t:"Saqqara and the Step Pyramid", q:"Pyramid of Djoser Saqqara", glyph:"🪜",
+     s:"The first large stone building in history, designed by Imhotep.",
+     d:["Saqqara was the burial ground of Memphis, Egypt’s first capital, used for over 3,000 years. Its centrepiece is the Step Pyramid of King Djoser, built around 2670 BC, about a century before the Giza pyramids.",
+        "Its architect, Imhotep, had the idea of stacking six stone mastabas, flat-topped tombs, one on top of another. It is the oldest large-scale cut-stone building in the world. Imhotep was later worshipped as a god of medicine and wisdom.",
+        "Saqqara is still producing discoveries: in recent years, archaeologists have found hundreds of sealed coffins, mummified cats and scarab beetles, and painted tombs of officials."],
+     look:["The enclosure wall with its niches and false doors","Stone columns carved to look like bundles of reeds","The Pyramid of Unas, the first with texts carved inside"],
+     kids:"This is the first pyramid ever. It looks like a giant staircase: Egyptians believed the king could climb it to the sky."}
+  ]
+},
+{
+  start:"2026-10-31", end:"2026-10-31", label:"Sat 31 Oct",
+  title:"The Grand Egyptian Museum and Islamic Cairo", place:"Giza and Old Cairo",
+  sum:"A long morning at the new Grand Egyptian Museum, including Tutankhamun’s treasures and Khufu’s boat, then a walk from Bab al-Futuh down al-Muizz Street to the Khan el-Khalili bazaar, ending in Al-Azhar Park.",
+  logi:["🛏 Cairo Marriott, Zamalek"],
+  stops:[
+    {id:"gem", t:"The Grand Egyptian Museum", q:"Grand Egyptian Museum", glyph:"🏛",
+     s:"The world’s largest museum devoted to one civilisation, beside the pyramids.",
+     d:["Planned for over 20 years and fully opened in late 2025, the GEM stands on the desert edge about 2 km from the pyramids, which you can see through its glass walls. It holds a huge collection, many pieces never displayed before.",
+        "You enter through a vast atrium with an 11-metre, 83-tonne statue of Ramesses II, moved here from central Cairo. The Grand Staircase climbs past dozens of royal statues to a view of the pyramids.",
+        "For the first time, Tutankhamun’s entire tomb collection, more than 5,000 objects, is shown together: his gold mask, his nested gilded shrines, his chariots, his throne, even his sandals and board games. The museum also displays Khufu’s ship, a 43-metre cedar boat buried beside the Great Pyramid 4,500 years ago and found in 1954."],
+     look:["Tutankhamun’s gold mask (11 kg of gold)","His child-sized chair and his game boxes","Khufu’s ship, the oldest intact large boat in the world","The pyramid view from the top of the staircase"],
+     kids:"Tutankhamun had a board game called senet buried with him. Find it, and ask the guide how it’s played."},
+    {id:"futuh", t:"Bab al-Futuh", q:"Bab al-Futuh Cairo", glyph:"🚪",
+     s:"A 900-year-old gate in Cairo’s medieval walls.",
+     d:["Bab al-Futuh, the ‘Gate of Conquests’, was built in 1087 by Badr al-Jamali, vizier of the Fatimid caliphs, using stone from ancient monuments. It is one of three surviving gates of the walled city, along with Bab al-Nasr and Bab Zuweila.",
+        "The walls were designed by Armenian architects and still have arrow slits and machicolations. Look closely and you may see stones carved with hieroglyphs, reused from older buildings."],
+     look:["Hieroglyph blocks reused in the walls","The rounded towers on either side"],
+     kids:"Builders recycled stones from ancient temples here. See if you can spot a hieroglyph in a medieval wall."},
+    {id:"muizz", t:"Al-Muizz Street", q:"Al-Muizz Street Cairo", glyph:"🕌",
+     s:"The main street of medieval Cairo, lined with mosques, palaces and minarets.",
+     d:["Named after the Fatimid caliph al-Muizz, who founded Cairo in 969, this street ran the length of the walled city. Sultans competed to build here, so in about a kilometre you pass a thousand years of Islamic architecture: Fatimid, Ayyubid, Mamluk and Ottoman.",
+        "Highlights include the Qalawun complex, a mosque, tomb and hospital built in 1285 (the hospital treated everyone free of charge), and the Mosque of al-Aqmar with its carved facade. Much of the street is pedestrian, and it is lovely in the late afternoon."],
+     look:["The Qalawun mausoleum’s stained glass and marble","Carved wooden mashrabiya window screens","Sabil-kuttabs: public fountains with a school above"],
+     kids:"A sabil was a free drinking fountain. People built them as a gift to the city."},
+    {id:"khalili", t:"Khan el-Khalili", q:"Khan el-Khalili bazaar", glyph:"🪔",
+     s:"Cairo’s great bazaar since the 14th century.",
+     d:["The Khan was founded in 1382 by the Mamluk emir Jaharks al-Khalili as a caravanserai, an inn for travelling merchants. It grew into a maze of lanes full of lamps, spices, brass, jewellery, perfume and textiles.",
+        "Bargaining is expected and friendly. El Fishawy café, open around the clock for over 200 years, is a classic spot for mint tea and fresh juice amid mirrors and brass."],
+     look:["Lantern shops glowing at dusk","El Fishawy café for mint tea","Gold and silversmiths’ lanes"],
+     kids:"Practise haggling: start at half the price and smile. Shukran means thank you."},
+    {id:"azhar", t:"Al-Azhar Park", q:"Al-Azhar Park Cairo", glyph:"🌳",
+     s:"A garden built on a 500-year-old rubbish heap, with the best view of the city.",
+     d:["For centuries this hill was a rubbish mound on the edge of the old city. The Aga Khan Trust for Culture cleared it and opened Al-Azhar Park in 2005, designed on the lines of traditional Islamic gardens, with water channels, fountains and fruit trees.",
+        "While digging, workers uncovered a 1.5 km stretch of the 12th-century Ayyubid city wall built by Saladin, now being restored. At sunset the minarets and domes of Islamic Cairo spread out below, and you may hear the call to prayer from hundreds of mosques at once."],
+     look:["The skyline of minarets at sunset","Saladin’s wall along the western edge"],
+     kids:"Count how many minarets you can see from the top. Cairo is called ‘the city of a thousand minarets’."}
+  ]
+},
+{
+  start:"2026-11-01", end:"2026-11-01", label:"Sun 1 Nov",
+  title:"Heading home", place:"Cairo",
+  sum:"Our Djed host collects us at the hotel and takes us to the airport for the flight to Zurich and on home.",
+  logi:["✈ LX239 Cairo → Zurich, 13:10"],
+  stops:[]
+}
+];
+
+/* =========================================================
+   Helpers
+   ========================================================= */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtTime = tz => new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit"}).format(new Date());
+const ymdIn = tz => {
+  const p = new Intl.DateTimeFormat("en-CA",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+  const g = t => p.find(x=>x.type===t).value; return `${g("year")}-${g("month")}-${g("day")}`;
+};
+const hourIn = tz => +new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",hour12:false}).format(new Date());
+
+/* ---------- Photos from Wikipedia (cached per device) ---------- */
+const imgCache = {};
+function cacheGet(k){ try{ const v = localStorage.getItem("img:"+k); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
+function cacheSet(k,v){ try{ localStorage.setItem("img:"+k, JSON.stringify(v)); }catch(e){} }
+async function wikiImage(q){
+  if (imgCache[q]) return imgCache[q];
+  const c = cacheGet(q); if (c) return (imgCache[q] = c);
+  const url = "https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrlimit=1&gsrsearch="
+    + encodeURIComponent(q) + "&prop=pageimages|info&piprop=thumbnail&pithumbsize=1200&inprop=url";
+  const p = fetch(url).then(r=>r.json()).then(j=>{
+    const pages = j && j.query && j.query.pages; if (!pages) return null;
+    const pg = Object.values(pages)[0];
+    const out = {src: pg.thumbnail ? pg.thumbnail.source : null, href: pg.fullurl, title: pg.title};
+    cacheSet(q,out); return out;
+  }).catch(()=>null);
+  imgCache[q] = p; return p;
+}
+function fillImg(holder, q, alt){
+  wikiImage(q).then(r=>{
+    if (!r || !r.src) return;
+    const im = new Image(); im.alt = alt; im.loading = "lazy"; im.decoding = "async";
+    im.onload = ()=> im.classList.add("ok");
+    im.src = r.src; holder.appendChild(im);
+  });
+}
+
+/* =========================================================
+   Render: timeline
+   ========================================================= */
+function dayState(d, today){
+  if (today < d.start) return "future";
+  if (today > (d.end)) return "past";
+  return "today";
+}
+function renderDays(){
+  const today = ymdIn("Africa/Cairo");
+  const ol = $("#days");
+  ol.innerHTML = DAYS.map((d,i)=>{
+    const st = dayState(d,today);
+    return `<li class="day ${st}" id="day-${d.start}" ${st==="today"?"open-day":""}>
+      <span class="node" aria-hidden="true">${i+1}</span>
+      <div class="day-card">
+        <button class="day-head" aria-expanded="${st==="today"}" data-day="${i}">
+          <span class="chev" aria-hidden="true">▾</span>
+          <span class="day-date">${esc(d.label)}${st==="today"?'<span class="today-tag">Today</span>':""}</span>
+          <div class="day-title">${esc(d.title)}</div>
+          <div class="day-place">${esc(d.place)}</div>
+          <p class="day-sum">${esc(d.sum)}</p>
+        </button>
+        <div class="day-body">
+          <div class="logi">${d.logi.map((l,k)=>`<span class="pill ${k===0?"gold":""}">${esc(l)}</span>`).join("")}</div>
+          <div class="stops">${d.stops.map(s=>`
+            <button class="stop" data-stop="${s.id}" aria-label="Read about ${esc(s.t)}">
+              <div class="ph" data-q="${esc(s.q)}" data-alt="${esc(s.t)}"><span class="glyph" aria-hidden="true">${s.glyph||"𓂀"}</span></div>
+              <div class="stop-txt">${s.tag?`<span class="tag">${esc(s.tag)}</span>`:""}<h4>${esc(s.t)}</h4><p>${esc(s.s)}</p></div>
+            </button>`).join("") || `<p class="day-sum">Safe travels home. Shukran, Egypt.</p>`}
+          </div>
+        </div>
+      </div>
+    </li>`;
+  }).join("");
+
+  ol.addEventListener("click", e=>{
+    const head = e.target.closest(".day-head");
+    if (head){
+      const li = head.closest(".day"); const open = li.hasAttribute("open-day");
+      open ? li.removeAttribute("open-day") : li.setAttribute("open-day","");
+      head.setAttribute("aria-expanded", String(!open));
+      if (!open) loadImages(li);
+      return;
+    }
+    const stop = e.target.closest(".stop");
+    if (stop) openSheet(stop.dataset.stop, stop);
+  });
+  document.querySelectorAll(".day[open-day]").forEach(loadImages);
+}
+function loadImages(scope){
+  scope.querySelectorAll(".ph[data-q]:not([data-done])").forEach(ph=>{
+    ph.dataset.done = "1"; fillImg(ph, ph.dataset.q, ph.dataset.alt);
+  });
+}
+
+/* =========================================================
+   Deep-dive sheet
+   ========================================================= */
+let lastFocus = null;
+function findStop(id){
+  for (const d of DAYS) for (const s of d.stops) if (s.id===id) return {s,d};
+}
+function openSheet(id, from){
+  const {s,d} = findStop(id); lastFocus = from;
+  const panel = $("#sheetPanel");
+  panel.innerHTML = `
+    <button class="close" data-close aria-label="Close">×</button>
+    <div class="sheet-img" id="sheetImg"></div>
+    <div class="sheet-body">
+      <div class="kicker">${esc(d.label)}, ${esc(d.place)}</div>
+      <h3 id="sheetTitle">${esc(s.t)}</h3>
+      ${s.tag?`<p><span class="pill gold">${esc(s.tag)}</span></p>`:""}
+      ${s.d.map(p=>`<p>${esc(p)}</p>`).join("")}
+      ${s.look?`<div class="box look"><h5>What to look for</h5><ul>${s.look.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+      ${s.kids?`<div class="box kids"><h5>For the kids</h5><p style="margin:0">${esc(s.kids)}</p></div>`:""}
+      <p class="credit" id="sheetCredit"></p>
+    </div>`;
+  $("#sheet").classList.add("open");
+  document.body.style.overflow = "hidden";
+  panel.scrollTop = 0;
+  panel.querySelector(".close").focus();
+  wikiImage(s.q).then(r=>{
+    if (r && r.src){ const im = new Image(); im.alt = s.t; im.src = r.src; $("#sheetImg") && $("#sheetImg").appendChild(im); }
+    const href = r && r.href ? r.href : "https://en.wikipedia.org/w/index.php?search="+encodeURIComponent(s.q);
+    const c = $("#sheetCredit"); if (c) c.innerHTML = `Photo and more detail: <a href="${esc(href)}" target="_blank" rel="noopener">Read more on Wikipedia</a>`;
+  });
+}
+function closeSheet(){
+  $("#sheet").classList.remove("open"); document.body.style.overflow = "";
+  if (lastFocus) lastFocus.focus();
+}
+$("#sheet").addEventListener("click", e=>{ if (e.target.closest("[data-close]")) closeSheet(); });
+document.addEventListener("keydown", e=>{ if (e.key==="Escape" && $("#sheet").classList.contains("open")) closeSheet(); });
+
+/* =========================================================
+   "Right now" status + clocks
+   ========================================================= */
+function updateNow(){
+  $("#tCairo").textContent = fmtTime("Africa/Cairo");
+  $("#tParis").textContent = fmtTime("Europe/Paris");
+  $("#tFla").textContent = fmtTime("America/New_York");
+
+  const today = ymdIn("Africa/Cairo"), h = hourIn("Africa/Cairo");
+  const first = DAYS[0].start, last = DAYS[DAYS.length-1].end;
+  let title, sub, showCta = false;
+  if (today < first){
+    const days = Math.round((new Date(first) - new Date(today)) / 864e5);
+    title = days===1 ? "We leave for Egypt tomorrow" : `${days} days until Egypt`;
+    sub = "First stop: Cairo, arriving Thursday 22 October.";
+  } else if (today > last){
+    title = "We’re home";
+    sub = "The trip is over. The guide stays here for the memories.";
+  } else {
+    const d = DAYS.find(x=>today>=x.start && today<=x.end);
+    showCta = true;
+    if (today===first && h < 17){ title = "Travelling to Cairo today"; sub = "Lufthansa LH582 from Frankfurt, then the hotel by the airport."; }
+    else if (today===last){ title = h < 14 ? "Flying home today" : "On the way home"; sub = "Swiss LX239, Cairo to Zurich at 13:10 Egypt time."; }
+    else if (d.start==="2026-10-24"){ title = "Somewhere on the Nile"; sub = "On the dahabiya Najma between Aswan and Esna. Phone signal may be patchy."; }
+    else { title = `Today: ${d.title}`; sub = `${d.place}. ${h>=21 ? "Probably back at the hotel by now." : ""}`.trim(); }
+    $("#nowCta").href = `#day-${d.start}`;
+  }
+  $("#nowTitle").textContent = title;
+  $("#nowSub").textContent = sub;
+  $("#nowCta").hidden = !showCta;
+}
+
+/* =========================================================
+   Map (schematic, north up)
+   ========================================================= */
+function renderMap(){
+  const today = ymdIn("Africa/Cairo");
+  const where = (()=>{
+    if (today < "2026-10-22" || today > "2026-11-01") return null;
+    if (today <= "2026-10-22") return "cairo";
+    if (today === "2026-10-23") return "aswan";
+    if (today <= "2026-10-26") return "nile";
+    if (today <= "2026-10-28") return "luxor";
+    return "cairo";
+  })();
+  const P = {cairo:[230,70], luxor:[300,430], esna:[285,490], edfu:[300,560], komombo:[318,625], aswan:[322,690]};
+  const dot = (k,label,side="right",big=false)=>{
+    const [x,y]=P[k]; const here = where===k || (where==="nile" && ["esna","edfu","komombo"].includes(k));
+    const tx = side==="right"? x+16 : x-16, anchor = side==="right"?"start":"end";
+    return `<g>
+      ${here?`<circle cx="${x}" cy="${y}" r="16" fill="var(--gold)" opacity=".25"/>`:""}
+      <circle cx="${x}" cy="${y}" r="${big?8:6}" fill="${here?"var(--gold)":"var(--card)"}" stroke="${here?"var(--gold)":"var(--lapis)"}" stroke-width="3"/>
+      <text x="${tx}" y="${y+5}" text-anchor="${anchor}" font-family="Figtree,sans-serif" font-size="${big?17:14}" font-weight="${big?700:500}" fill="var(--ink)">${label}</text>
+    </g>`;
+  };
+  $("#mapBox").innerHTML = `
+  <svg viewBox="0 0 520 760" role="img" aria-label="Schematic map of the route along the Nile from Cairo to Aswan">
+    <text x="20" y="34" font-family="Marcellus,serif" font-size="15" fill="var(--muted)">N ↑</text>
+    <path d="M150 0 C 190 30, 215 45, 230 70" fill="none" stroke="var(--turq)" stroke-width="10" stroke-linecap="round" opacity=".35"/>
+    <path d="M230 70 C 250 160, 210 230, 240 300 S 330 380, 300 430 S 280 470, 285 490 S 305 530, 300 560 S 320 600, 318 625 S 330 670, 322 690 L 330 740"
+          fill="none" stroke="var(--turq)" stroke-width="10" stroke-linecap="round" opacity=".35"/>
+    <path d="M322 690 C 330 670, 318 645, 318 625 S 300 580, 300 560 S 282 510, 285 490"
+          fill="none" stroke="var(--turq)" stroke-width="4" stroke-dasharray="0" />
+    <path d="M285 490 C 290 470, 296 450, 300 430" fill="none" stroke="var(--turq)" stroke-width="4"/>
+    <path d="M230 70 Q 470 300 322 690" fill="none" stroke="var(--gold)" stroke-width="3" stroke-dasharray="8 7"/>
+    <path d="M300 430 Q 170 250 230 70" fill="none" stroke="var(--gold)" stroke-width="3" stroke-dasharray="8 7"/>
+    <text x="420" y="330" font-family="Figtree,sans-serif" font-size="12" fill="var(--gold)" text-anchor="middle">23 Oct</text>
+    <text x="185" y="270" font-family="Figtree,sans-serif" font-size="12" fill="var(--gold)" text-anchor="middle">29 Oct</text>
+    <text x="350" y="600" font-family="Figtree,sans-serif" font-size="12" fill="var(--turq)">Najma</text>
+    <text x="350" y="615" font-family="Figtree,sans-serif" font-size="12" fill="var(--turq)">24–27 Oct</text>
+    <text x="40" y="120" font-family="Figtree,sans-serif" font-size="12" fill="var(--muted)">Giza &amp; Saqqara</text>
+    <text x="40" y="136" font-family="Figtree,sans-serif" font-size="12" fill="var(--muted)">just west of Cairo</text>
+    ${dot("cairo","Cairo &amp; Giza","left",true)}
+    ${dot("luxor","Luxor","left",true)}
+    ${dot("esna","Esna","left")}
+    ${dot("edfu","Edfu","left")}
+    ${dot("komombo","Kom Ombo","left")}
+    ${dot("aswan","Aswan","left",true)}
+  </svg>`;
+}
+
+/* ---------- Stays table ---------- */
+function renderStays(){
+  $("#stays").innerHTML = STAYS.map(s=>`<tr><td>${esc(s.nights)}</td><td>${esc(s.place)}</td>
+    <td><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.q)}" target="_blank" rel="noopener">${esc(s.name)}</a></td></tr>`).join("");
+}
+
+/* ---------- Tabs highlight ---------- */
+function tabSpy(){
+  const links = [...document.querySelectorAll(".tabs a")];
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if (e.isIntersecting){
+      links.forEach(a=>a.setAttribute("aria-current", String(a.getAttribute("href")==="#"+e.target.id)));
+    }});
+  },{rootMargin:"-40% 0px -55% 0px"});
+  document.querySelectorAll("section.panel").forEach(s=>io.observe(s));
+}
+
+renderDays(); renderMap(); renderStays(); updateNow(); tabSpy();
+setInterval(()=>{ updateNow(); }, 30000);
+</script>
+</body>
+</html>
